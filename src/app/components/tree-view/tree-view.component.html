@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor='let treeItem of parentData'>{{ treeItem.title }}
+    <ul *ngIf='treeItem.categories.length > 0'>
+      <li>
+        <app-tree-view [parentData]="treeItem.categories"></app-tree-view>
+      </li>
+    </ul>
+  </li>
+</ul>
+
