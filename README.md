@@ -21,7 +21,7 @@ Angular6, JSON
 4. Pass the public variable "getTreeViewData" from Parent component (dashboard) > child component (tree-view)
       <app-tree-view [parentData]='getTreeViewData'></app-tree-view>
 5. Apply recursive method to inject <app-tree-view> in itself so that if any sub-item has any further category then the loop can be          iterated.  
-      <ul>
+      <pre><ul>
         <li *ngFor='let treeItem of parentData'>{{ treeItem.title }}
           <ul *ngIf='treeItem.categories.length > 0'>
             <li>
@@ -29,6 +29,6 @@ Angular6, JSON
             </li>
           </ul>
         </li>
-      </ul>
+      </ul></pre>
   6. Call the dashboard component in you main app i.e. app-component.
    
